@@ -14,23 +14,23 @@ const iconMap: { [key: string]: LucideIcon } = {
   Briefcase, Star, Book, Heart, Rocket, Trophy, Zap, Coffee
 };
 const defaultCardData: CardData = {
-  name: "雷布斯",
-  location: "北京",
-  tags: ["企业家", "投资人", "科技创新者"],
-  recentFocus: "推动小米集团在智能家居和电动汽车领域的创新",
+  name: "善忘",
+  location: "中国",
+  tags: ["全栈工程师", "技术博主", "终身学习者"],
+  recentFocus: "分享实用软件，提升工作效率",
   highlights: [
-    "创立小米科技，打造全球领先的智能手机品牌",
-    "担任金山软件董事长，推动公司转型",
-    "入选《财富》“全球最具影响力的50位商界领袖”"
+    "07年投身技术行业",
+    "涉足管理领域",
+    "分享技术"
   ],
   skills: [
-    { name: "企业管理", description: "擅长战略规划和团队领导", color: "blue" },
-    { name: "产品创新", description: "推动“米粉文化”和“性价比战略”", color: "green" },
-    { name: "投资眼光", description: "成功投资多家科技创新企业", color: "purple" },
-    { name: "品牌营销", description: "善于利用社交媒体塑造个人品牌", color: "orange" }
+    { name: "前端开发", description: "精通前端技术，包括HTML、CSS、JavaScript等", color: "blue" },
+    { name: "后端开发", description: "熟悉后端技术，包括Java、Python等", color: "green" },
+    { name: "运维", description: "擅长运维工作，包括服务器管理、自动化部署等", color: "purple" },
+    { name: "项目管理", description: "具备项目管理经验，能够有效协调团队资源", color: "orange" }
   ],
-  hobbies: ["📚 阅读", "🏃‍♂️ 跑步", "✈️ 旅行","👌 ARE YOU OK"],
-  motto: "永远相信美好的事情即将发生",
+  hobbies: ["📚 阅读", "🏃‍♂️ 跑步"],
+  motto: "用技术改变世界，探索技术的魅力",
   headerGradient: "from-orange-500 to-red-500",
   icons: {
     recentFocus: "Rocket",
@@ -38,8 +38,8 @@ const defaultCardData: CardData = {
     skills: "Zap",
     hobbies: "Heart"
   },
-  avatarUrl: '/images/cute.png',
-  qrCodeUrl: '/images/qr.png',
+  avatarUrl: '/images/avatar.png',
+  qrCodeUrl: '/images/qrcode.png',
 };
 
 // const defaultCardData: CardData = {
