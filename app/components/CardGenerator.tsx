@@ -39,7 +39,7 @@ const defaultCardData: CardData = {
     hobbies: "Heart"
   },
   avatarUrl: '/images/avatar.png',
-  qrCodeUrl: '/images/qrcode.png',
+  qrCodeUrl: '/images/qrcode.jpg',
 };
 
 // const defaultCardData: CardData = {
