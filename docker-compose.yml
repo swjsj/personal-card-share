@@ -1,0 +1,13 @@
+version: '3'
+services:
+  nextjs-app:
+    build: .
+    container_name: your-app
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - ZHIPU_API_KEY=${ZHIPU_API_KEY}
+    restart: always
+    volumes:
+      - ./logs:/app/logs 
