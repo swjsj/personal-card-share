@@ -1,5 +1,5 @@
 # 3. 设置环境变量
-echo "ZHIPU_API_KEY=你的智谱API密钥" > .env
+echo "ZHIPU_API_KEY=d95c9675b9f09e33ef54774eb7d0452b.USNTcpLdW8lnG57S" > .env
 
 # 4. 构建并启动容器
 docker-compose up -d --build

@@ -1,26 +1,13 @@
-# 使用 Node.js 18 作为基础镜像
-FROM node:18-alpine
+FROM alibaba-cloud-linux-3-registry.cn-hangzhou.cr.aliyuncs.com/alinux3/node:20.16
 
-# 设置工作目录
 WORKDIR /app
 
-# 复制 package.json 和 package-lock.json
+# 只复制运行需要的文件
 COPY package*.json ./
+COPY .next ./.next
+COPY public ./public
+COPY node_modules ./node_modules
 
-# 安装依赖
-RUN npm install
-
-# 复制所有源代码
-COPY . .
-
-# 创建 .env.production 文件
-RUN echo "ZHIPU_API_KEY=${ZHIPU_API_KEY}" > .env.production
-
-# 构建应用
-RUN npm run build
-
-# 暴露端口
 EXPOSE 3000
 
-# 启动应用
 CMD ["npm", "start"] 
