@@ -1,12 +1,17 @@
-FROM registry.cn-beijing.aliyuncs.com/sily/nginx
+FROM registry.cn-beijing.aliyuncs.com/sily/node:18-alpine
 
-RUN rm -rf /usr/share/nginx/html/*
+WORKDIR /app
 
-COPY .next/static /usr/share/nginx/html/_next/static
-COPY public /usr/share/nginx/html/public
+# 复制构建后的文件
+COPY .next/standalone ./
+COPY .next/static ./.next/static
+COPY public ./public
 
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# 设置环境变量
+ENV NODE_ENV=production
+ENV PORT=3000
 
-EXPOSE 80
+EXPOSE 3000
 
-CMD ["nginx", "-g", "daemon off;"] 
+# 启动应用
+CMD ["node", "server.js"]
