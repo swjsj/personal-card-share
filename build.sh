@@ -1,8 +1,5 @@
-# 3. 设置环境变量
-echo "ZHIPU_API_KEY=d95c9675b9f09e33ef54774eb7d0452b.USNTcpLdW8lnG57S" > .env
-
-# 4. 构建并启动容器
-docker-compose up -d --build
-
-# 5. 查看日志
-docker-compose logs -f
+#!/bin/bash
+docker rmi personal-card-share:latest
+docker build -t personal-card-share:latest .
+docker tag personal-card-share:latest registry.cn-beijing.aliyuncs.com/sily/personal-card-share
+docker push registry.cn-beijing.aliyuncs.com/sily/personal-card-share
