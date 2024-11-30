@@ -1,13 +1,12 @@
-FROM alibaba-cloud-linux-3-registry.cn-hangzhou.cr.aliyuncs.com/alinux3/node:20.16
+FROM registry.cn-beijing.aliyuncs.com/sily/nginx
 
-WORKDIR /app
+RUN rm -rf /usr/share/nginx/html/*
 
-# 只复制运行需要的文件
-COPY package*.json ./
-COPY .next ./.next
-COPY public ./public
-COPY node_modules ./node_modules
+COPY .next/static /usr/share/nginx/html/_next/static
+COPY public /usr/share/nginx/html/public
 
-EXPOSE 3000
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-CMD ["npm", "start"] 
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"] 
